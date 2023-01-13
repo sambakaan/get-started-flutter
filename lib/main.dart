@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_flutter_app/widgets/message_info.dart';
 
 void main() => runApp(MyApp());
 
@@ -63,23 +64,11 @@ class _MyAppState extends State<MyApp> {
               ),
               Column(
                 children: [
-                  Text(
-                    wirds.elementAt(wirdIndex),
-                    style: const TextStyle(
-                        fontSize: 30,
-                        fontFamily: 'sans-serif',
-                        fontWeight: FontWeight.bold),
-                  ),
+                  MessageInfo(message: wirds.elementAt(wirdIndex)),
                   const SizedBox(
                     height: 20,
                   ),
-                  Text(
-                    '$nbreWird',
-                    style: const TextStyle(
-                        fontSize: 25,
-                        fontFamily: 'sans-serif',
-                        fontWeight: FontWeight.bold),
-                  )
+                  MessageInfo(message: nbreWird.toString()),
                 ],
               ),
             ],
