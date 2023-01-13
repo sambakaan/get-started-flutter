@@ -2,13 +2,20 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
-  int nbreWird = 32;
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int nbreWird = 17;
 
   void addWird() {
-    nbreWird++;
-    print('je suis la ');
-    print(nbreWird);
+    setState(() {
+      nbreWird++;
+      print('je suis la ');
+      print(nbreWird);
+    });
   }
 
   Widget build(BuildContext context) {
